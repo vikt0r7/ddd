@@ -15,4 +15,9 @@ class DepositInternalTransaction extends InternalTransaction
 
         $account->setWallet($wallet);
     }
+
+    public function getTransactionType(): string
+    {
+        return self::class;
+    }
 }

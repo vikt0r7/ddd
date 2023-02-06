@@ -8,6 +8,7 @@ use App\Domain\Account\AccountNumber;
 use App\Domain\Account\AccountService;
 use App\Domain\Account\FinancialAccountWallet;
 use App\Domain\Contracts\FinancialAccount;
+use JetBrains\PhpStorm\Pure;
 
 class AccountApplicationService
 {
@@ -29,7 +30,7 @@ class AccountApplicationService
     /**
      * Get an account
      */
-    public function getAccount(AccountNumber $accountNumber): FinancialAccount
+    #[Pure] public function getAccount(AccountNumber $accountNumber): FinancialAccount
     {
         return $this->accountService->getAccount($accountNumber);
     }
@@ -37,7 +38,7 @@ class AccountApplicationService
     /**
      * Get all accounts in the system
      */
-    public function getAllAccounts(): array
+    #[Pure] public function getAllAccounts(): array
     {
         return $this->accountService->getAccounts();
     }

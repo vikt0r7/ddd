@@ -36,11 +36,6 @@ abstract class InternalTransaction implements TransactionContract
         return $this->accountNumber;
     }
 
-    public function getTransactionType(): TransactionType
-    {
-        return $this->transactionType;
-    }
-
     public function getAmount(): float
     {
         return $this->amount;

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Domain\Transaction;
 
 use App\Domain\Contracts\ValueObject;
+use JetBrains\PhpStorm\Pure;
 
 final class TransactionId implements ValueObject
 {
@@ -15,7 +16,7 @@ final class TransactionId implements ValueObject
         $this->id = $id;
     }
 
-    public function equals(ValueObject $valueObject): bool
+    #[Pure] public function equals(ValueObject $valueObject): bool
     {
         return get_class($valueObject) === self::class && $valueObject->getId() === $this->getId();
     }
