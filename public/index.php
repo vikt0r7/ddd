@@ -1,5 +1,7 @@
 <?php
 
+require_once './vendor/autoload.php';
+
 use App\Application\AccountApplicationService;
 use App\Application\TransactionApplicationService;
 use App\Domain\Account\AccountNumber;
